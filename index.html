@@ -100,7 +100,9 @@
 
       async function main() {
         // alert("LINE Developers x Skooldio");
-        await liff.init({ liffId: "2010239910-1DN31XlR" });
+        await liff
+          .init({ liffId: "2010239910-1DN31XlR" })
+          .then(console.log(liff));
         getEnvironment();
         getUserProfile();
         getContext();
