@@ -59,7 +59,10 @@
 
       function openWindow() {}
 
-      async function getFriendship() {}
+      async function getFriendship() {
+        const friend = liff.getFriendship();
+        document.getElementById("friendship").append(friend.friendFlag);
+      }
 
       async function sendMsg() {
         if (liff.getContext().type !== "none") {
@@ -117,7 +120,7 @@
         getEnvironment();
         getUserProfile();
         getContext();
-        // getFriendship()
+        getFriendship();
         // createUniversalLink()
       }
       main();
